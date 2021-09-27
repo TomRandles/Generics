@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace GenericsIntro.Domain
 {
-    public class Buffer<T>
+    //Circular buffer
+    public class MyBuffer<T>
     {
         private T[] _buffer;
         private int _start;
         private int _end;
 
-        public Buffer()
+        public MyBuffer()
             : this(capacity: 10)
         {
         }
 
-        public Buffer(int capacity)
+        public MyBuffer(int capacity)
         {
             _buffer = new T[capacity + 1];
             _start = 0;
